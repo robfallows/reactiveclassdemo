@@ -1,0 +1,17 @@
+<head>
+  <title>reactive class demo</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button class="color" data-value="red">Red</button>
+  <button class="color" data-value="green">Green</button>
+  <button class="color" data-value="yellow">Yellow</button>
+  <button class="align" data-value="left">Left</button>
+  <button class="align" data-value="center">Center</button>
+  <button class="align" data-value="right">Right</button>
+  <p class="{{getcolor}} {{getalign}}">Welcome to Meteor!</p>
+</template>
