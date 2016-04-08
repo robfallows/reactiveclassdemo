@@ -1,20 +1,17 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { TabularTables } from 'meteor/aldeed:tabular';
 
 import './main.html';
 
 Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
   this.color = new ReactiveVar('');
   this.align = new ReactiveVar('');
 });
 
 Template.hello.helpers({
-  getcolor() {
-    return Template.instance().color.get();
-  },
-  getalign() {
-    return Template.instance().align.get();
+  getclass() {
+    return `${Template.instance().color.get()} ${Template.instance().align.get()}`;
   },
 });
 
